@@ -1,0 +1,19 @@
+import {
+  LOAD_WIDGETS_LIST,
+  SET_WIDGETS_LIST,
+  UPDATE_WIDGET,
+  DELETE_WIDGET
+} from './data.action';
+import {
+  SET_EDIT_WIDGET,
+  DATA_LOADING
+} from './ui.action';
+
+export {
+  DATA_LOADING,
+  LOAD_WIDGETS_LIST,
+  SET_WIDGETS_LIST,
+  SET_EDIT_WIDGET,
+  UPDATE_WIDGET,
+  DELETE_WIDGET
+}

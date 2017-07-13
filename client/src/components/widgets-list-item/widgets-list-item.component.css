@@ -1,0 +1,16 @@
+
+:local .item td{
+  padding:5px 10px;
+}
+
+:local .item:nth-child(2n+2) td{
+  background-color: #efefef;
+}
+
+:local .item:hover td{
+  background-color: #DFFAFF;
+}
+
+:local .center {
+  text-align: center;
+}

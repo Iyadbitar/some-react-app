@@ -11,8 +11,10 @@ var config = {
     path: DIST_DIR,
     filename: 'bundle.js'
   },
+  resolve: {
+    extensions:['.js', '.jsx']
+  },
   module : {
-
     loaders: [
       {
         test: /\.jsx?/,
@@ -33,7 +35,8 @@ var config = {
     new HtmlWebpackPlugin({
       template: SRC_DIR + '/index.html'
     })
-  ]
+  ],
+  devtool: "source-map"
 };
 
 module.exports = config;

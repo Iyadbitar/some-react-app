@@ -1,16 +1,18 @@
 import React from 'react';
 import { render } from 'react-dom';
-// import { Provider } from 'react-redux';
-// import store from './store';
+
+import styles from '../css/defaults.css';
+import { Provider } from 'react-redux';
+import store from './store';
 
 // import config from './config/config';
 
-// import ParckingGarage from './components/ParckingGarage/ParckingGarage.component.jsx'
+import {WidgetsShopping} from './components';
 
 // import configAction from './actions/config.action';
 // import eventsLoadAction from './actions/events-load.action';
 
-class WidgetsShoppingApp extends React.Component {
+class App extends React.Component {
 
   componentWillMount(){
     // reduce config object into store to be part of app state
@@ -22,10 +24,10 @@ class WidgetsShoppingApp extends React.Component {
 
 
   render() {
-    return <div className="app-wrapper">
-      <h1>Widgets app</h1>
-    </div>;
+    return <Provider store={store}>
+      <WidgetsShopping />
+    </Provider>
   }
 }
 
-render(<WidgetsShoppingApp />, document.getElementById('app-wrapper'));
+render(<App />, document.getElementById('app-wrapper'));
